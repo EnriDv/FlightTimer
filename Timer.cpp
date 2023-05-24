@@ -9,7 +9,7 @@ double calcularTiempoVuelo(double distancia, double velocidad)
         return 0.0;
     }
 
-    return distancia / velocidad;
+    return (distancia / velocidad)*60;
 }
 
 int main()
@@ -19,12 +19,12 @@ int main()
     cout << "Ingrese la distancia entre los puntos (en kilómetros): ";
     cin >> distancia;
 
-    cout << "Ingrese la velocidad del avión (en kilómetros por hora): ";
-    cin >> velocidad;
+    //Tomamos en cuenta la velocidad media del avion como 250 Km/h
+    velocidad=250;
 
     double tiempoVuelo = calcularTiempoVuelo(distancia, velocidad);
 
-    cout << "El tiempo de vuelo estimado es: " << tiempoVuelo << " horas." << endl;
+    cout << "El tiempo de vuelo estimado es: " << tiempoVuelo << " minutos." << endl;
 
     return 0;
 }
